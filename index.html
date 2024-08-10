@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>osu!roulette</title>
+  <style>
+  @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+  body {
+    background-color: #222;
+    font-size: 15pt;
+    color: white;
+    font-family: "Rubik";
+    text-align: center;
+  }
+  #logo {
+    width: 100px;
+  }
+  </style>
+</head>
+<body>
+  <div id="container">
+    <img id="logo" src="https://raw.githubusercontent.com/ppy/osu/master/assets/lazer.png">
+    <h1>osu!roulette</h1>
+    <p>Looking for a beatmap for you to play... This will take around 2.5 seconds, please be patient...</p>
+    <p>If the provided link is invalid, please try again</p>
+  </div>
+  <script>
+    function generateBeatmap() {
+      var random = Math.floor(Math.random() * 2139342);
+      window.location.href = "https://osu.ppy.sh/beatmapsets/" + random;
+    }
+    setTimeout(generateBeatmap, 2500)
+  </script>
+</body>
+</html>
